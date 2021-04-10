@@ -1,0 +1,88 @@
+@charset "UTF-8";
+// ===================================================================
+// 共通設定
+// ===================================================================
+    img {
+        width: 100%;
+        vertical-align: bottom;
+    }
+    a {
+        text-decoration: none;
+    }
+// ================================
+// 幅関係の設定
+// ================================
+
+    // 最大幅
+    $width-max: 1280px;
+    // メインエリアの幅
+    $width-main: 960px;
+
+
+
+    // 最小幅
+    $width-min: 300px;
+    // サイドバーの幅
+    $width-side: 360px;
+
+// ================================
+// フォント関係の設定
+// ================================
+    // ベースフォント
+    @mixin font-base{
+        color: $color-font;
+        font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", verdana, Sans-Serif;
+        font-size: 1.6rem;
+        letter-spacing: .05em;
+    }
+    @mixin font-title{
+        color: $color-font-title;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    // 明朝
+    $font-serif: Georgia, YuMincho, "Yu Mincho", 游明朝体, "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+
+
+// ================================
+// 色関係の設定
+// ================================
+    // サイトカラー
+    $color-base: white;
+    $color-main: #0062b2;
+    $color-sub: #def1fa;
+
+    // フォントカラー
+    $color-font: #24292E;
+    $color-font-title: #333;
+
+
+
+    // リンクカラー
+    $color-link: #ff8c28;
+    $color-link_visited: #39f;
+    $color-link_hover: #cc7020;
+    $color-link_active: #00f;
+
+    // ボーダーカラー
+    $color-border: #d2d2d2;
+
+// ================================
+// ブレイクポイント
+// ================================
+    $breakPoint-pc: 769px;
+    $breakPoint-sp: 768px;
+
+    // ** mixin
+    // * ブレイクポイント
+    @mixin pc {
+    @media screen and (min-width: $breakPoint-pc) {
+        @content;
+    }
+    }
+    @mixin sp {
+    @media screen and (max-width: $breakPoint-sp) {
+        @content;
+    }
+    }
