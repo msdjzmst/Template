@@ -17,6 +17,7 @@ const imageminMozjpeg = require("imagemin-mozjpeg");
 const imageminPngquant = require("imagemin-pngquant");
 const imageminSvgo = require("imagemin-svgo");
 
+//SVGファイル圧縮
 
 // 入出力するフォルダを指定
 const srcBase = './_static/src';
